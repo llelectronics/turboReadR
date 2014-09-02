@@ -34,6 +34,8 @@ import "pages"
 
 ApplicationWindow
 {
+    id: mainWindow
+    allowedOrientations: Orientation.All
 
     property string version: "1.0"
     property string appname: "TurboReadR"

@@ -34,6 +34,7 @@ import Sailfish.Silica 1.0
 
 Page {
     id: page
+    allowedOrientations: mainWindow.allowedOrientations
     SilicaFlickable {
         id: listView
         anchors.fill: parent

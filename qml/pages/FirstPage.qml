@@ -35,6 +35,7 @@ import Sailfish.Silica 1.0
 Page {
     id: page
     property int words_per_minute: 300 // 200 words per minute
+    allowedOrientations: mainWindow.allowedOrientations
 
     function getWords(string) {
 

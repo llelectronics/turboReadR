@@ -45,5 +45,13 @@
         <source>Words per minute:</source>
         <translation>Worte pro Minute:</translation>
     </message>
+    <message>
+        <source>Long Words per minute:</source>
+        <translation>Lange Worte pro Minute:</translation>
+    </message>
+    <message>
+        <source>Long Word is &lt;b&gt;%1&lt;/b&gt; characters long</source>
+        <translation>Langes Wort ist &lt;b&gt;%1&lt;/b&gt; Zeichen lang</translation>
+    </message>
 </context>
 </TS>

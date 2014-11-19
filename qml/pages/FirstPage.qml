@@ -36,6 +36,7 @@ Page {
     id: page
     property int words_per_minute: 300 // 200 words per minute
     property int long_words_timeout: words_per_minute * 2
+    property int long_word_chars: 15
     allowedOrientations: mainWindow.allowedOrientations
 
     function getWords(string) {
@@ -148,7 +149,7 @@ Page {
                 onTriggered: {
                     if (i<wordArray.length) {
                         readR.text = wordArray[i];
-                        if (wordArray[i].length > 15) {
+                        if (wordArray[i].length > long_word_chars) {
                             stop();
                             long_word_timer.start();
                         }

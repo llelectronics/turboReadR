@@ -38,6 +38,7 @@ Page {
     SilicaFlickable {
         id: listView
         anchors.fill: parent
+        anchors.leftMargin: Theme.paddingMedium
 
         // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
@@ -65,6 +66,40 @@ Page {
                 valueText: value
                 onValueChanged: {
                     firstpage.words_per_minute = (60000/value)
+                }
+            }
+            Label {
+                text: qsTr("Long Word is <b>%1</b> characters long").arg(longwordIsSlider.value)
+            }
+
+            Slider {
+                id: longwordIsSlider
+                width: parent.width - (Theme.paddingLarge * 2)
+                anchors.horizontalCenter: parent.horizontalCenter
+                minimumValue: 2
+                maximumValue: 40
+                value: firstpage.long_word_chars
+                stepSize: 1
+                valueText: value
+                onValueChanged: {
+                    firstpage.long_word_chars = value
+                }
+            }
+
+            Label {
+                text: qsTr("Long Words per minute:")
+            }
+
+            Slider {
+                width: parent.width - (Theme.paddingLarge * 2)
+                anchors.horizontalCenter: parent.horizontalCenter
+                minimumValue: 100
+                maximumValue: 1000
+                value: Math.floor((60000/firstpage.long_words_timeout))
+                stepSize: 50
+                valueText: value
+                onValueChanged: {
+                    firstpage.long_words_timeout = (60000/value)
                 }
             }
         }

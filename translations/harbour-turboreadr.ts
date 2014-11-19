@@ -53,5 +53,9 @@
         <source>Long Word is &lt;b&gt;%1&lt;/b&gt; characters long</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Font size:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

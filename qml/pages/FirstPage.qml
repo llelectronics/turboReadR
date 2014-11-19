@@ -37,6 +37,7 @@ Page {
     property int words_per_minute: 300 // 200 words per minute
     property int long_words_timeout: words_per_minute * 2
     property int long_word_chars: 15
+    property int fontSize: 42
     allowedOrientations: mainWindow.allowedOrientations
 
     function getWords(string) {
@@ -135,7 +136,7 @@ Page {
         }
         Text {
             id: readR
-            font.pointSize: 42
+            font.pointSize: fontSize
             font.bold: true
             opacity: 1.0
             color: "white"

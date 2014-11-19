@@ -53,5 +53,9 @@
         <source>Long Word is &lt;b&gt;%1&lt;/b&gt; characters long</source>
         <translation>Langes Wort ist &lt;b&gt;%1&lt;/b&gt; Zeichen lang</translation>
     </message>
+    <message>
+        <source>Font size:</source>
+        <translation>Schriftgröße:</translation>
+    </message>
 </context>
 </TS>

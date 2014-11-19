@@ -102,6 +102,23 @@ Page {
                     firstpage.long_words_timeout = (60000/value)
                 }
             }
+
+            Label {
+                text: qsTr("Font size:")
+            }
+
+            Slider {
+                width: parent.width - (Theme.paddingLarge * 2)
+                anchors.horizontalCenter: parent.horizontalCenter
+                minimumValue: 24
+                maximumValue: 100
+                value: firstpage.fontSize
+                stepSize: 2
+                valueText: value
+                onValueChanged: {
+                    firstpage.fontSize = value
+                }
+            }
         }
         VerticalScrollDecorator {}
     }

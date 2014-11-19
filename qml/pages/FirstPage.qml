@@ -35,6 +35,7 @@ import Sailfish.Silica 1.0
 Page {
     id: page
     property int words_per_minute: 300 // 200 words per minute
+    property int long_words_timeout: words_per_minute * 2
     allowedOrientations: mainWindow.allowedOrientations
 
     function getWords(string) {
@@ -92,6 +93,15 @@ Page {
             }
         }
     }
+
+    Timer {
+        id: long_word_timer
+        interval: long_words_timeout; repeat:false
+        onTriggered: {
+            read.start()
+        }
+    }
+
     Item {
         id: overlay
         anchors.fill: parent
@@ -138,6 +148,10 @@ Page {
                 onTriggered: {
                     if (i<wordArray.length) {
                         readR.text = wordArray[i];
+                        if (wordArray[i].length > 15) {
+                            stop();
+                            long_word_timer.start();
+                        }
                         i++;
                     }
                     else stop();

@@ -39,7 +39,7 @@
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>Einstellungen</translation>
+        <translation type="obsolete">Einstellungen</translation>
     </message>
     <message>
         <source>Words per minute:</source>
@@ -56,6 +56,10 @@
     <message>
         <source>Font size:</source>
         <translation>Schriftgröße:</translation>
+    </message>
+    <message>
+        <source>Save Settings</source>
+        <translation>Einstellungen speichern</translation>
     </message>
 </context>
 </TS>

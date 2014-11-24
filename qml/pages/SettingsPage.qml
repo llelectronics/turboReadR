@@ -30,33 +30,61 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "db.js" as DB
 
-
-Page {
-    id: page
+Dialog {
+    id: settingsPage
     allowedOrientations: mainWindow.allowedOrientations
+
+    acceptDestinationAction: PageStackAction.Pop
+
+// TODO
+    //    function loadDefaults() {
+//        loadSubtitlesSwitch.checked = true ;
+//        subtitleSizeCombo.currentIndex = 34 - 25;
+//        boldSubtitlesSwitch.checked = false ;
+//        colorIndicator.color = Theme.highlightColor
+//        directYoutubeSwitch.checked = false;
+//        openDialogCombo.currentIndex = 0;
+//        liveViewSwitch.checked = true;
+//    }
+
+    function saveSettings() {
+        // Only save if something changes
+        if (60000/wordsPerMinuteSlider.value != firstpage.words_per_minute) DB.addSetting("wordsPerMinute", wordsPerMinuteSlider.value.toString());
+        if (longwordIsSlider.value != firstpage.long_word_chars) DB.addSetting("longwordIs", longwordIsSlider.value.toString());
+        if (60000/longWordsPerMinuteSlider.value != firstpage.long_words_timeout) DB.addSetting("longWordsPerMinute", longWordsPerMinuteSlider.value.toString());
+        if (fontSizeSlider.value != firstpage.fontSize) DB.addSetting("fontSize", fontSizeSlider.value.toString());
+        DB.getSettings();
+    }
+
+    onAccepted: saveSettings();
+
     SilicaFlickable {
         id: listView
         anchors.fill: parent
         anchors.leftMargin: Theme.paddingMedium
 
         // Tell SilicaFlickable the height of its content.
-        contentHeight: column.height
+        contentHeight: column.height + head.height
+
+        DialogHeader {
+            id: head
+            acceptText: qsTr("Save Settings")
+        }
 
         Column {
             id: column
             width: parent.width
             spacing: Theme.paddingLarge
-
-            PageHeader {
-                title: qsTr("Settings")
-            }
+            anchors.top: head.bottom
 
             Label {
                 text: qsTr("Words per minute:")
             }
 
             Slider {
+                id: wordsPerMinuteSlider
                 width: parent.width - (Theme.paddingLarge * 2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 minimumValue: 100
@@ -64,9 +92,6 @@ Page {
                 value: Math.floor((60000/firstpage.words_per_minute))
                 stepSize: 50
                 valueText: value
-                onValueChanged: {
-                    firstpage.words_per_minute = (60000/value)
-                }
             }
             Label {
                 text: qsTr("Long Word is <b>%1</b> characters long").arg(longwordIsSlider.value)
@@ -81,9 +106,6 @@ Page {
                 value: firstpage.long_word_chars
                 stepSize: 1
                 valueText: value
-                onValueChanged: {
-                    firstpage.long_word_chars = value
-                }
             }
 
             Label {
@@ -91,6 +113,7 @@ Page {
             }
 
             Slider {
+                id: longWordsPerMinuteSlider
                 width: parent.width - (Theme.paddingLarge * 2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 minimumValue: 100
@@ -98,9 +121,6 @@ Page {
                 value: Math.floor((60000/firstpage.long_words_timeout))
                 stepSize: 50
                 valueText: value
-                onValueChanged: {
-                    firstpage.long_words_timeout = (60000/value)
-                }
             }
 
             Label {
@@ -108,6 +128,7 @@ Page {
             }
 
             Slider {
+                id: fontSizeSlider
                 width: parent.width - (Theme.paddingLarge * 2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 minimumValue: 24
@@ -115,9 +136,6 @@ Page {
                 value: firstpage.fontSize
                 stepSize: 2
                 valueText: value
-                onValueChanged: {
-                    firstpage.fontSize = value
-                }
             }
         }
         VerticalScrollDecorator {}

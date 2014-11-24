@@ -30,15 +30,20 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-
+import "db.js" as DB
 
 Page {
     id: page
+
     property int words_per_minute: 300 // 200 words per minute
     property int long_words_timeout: words_per_minute * 2
     property int long_word_chars: 15
     property int fontSize: 42
     allowedOrientations: mainWindow.allowedOrientations
+
+    Component.onCompleted: {
+        DB.initialize();
+    }
 
     function getWords(string) {
 

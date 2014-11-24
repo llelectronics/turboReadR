@@ -31,18 +31,27 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "pages/db.js" as DB
 
 ApplicationWindow
 {
     id: mainWindow
     allowedOrientations: Orientation.All
 
-    property string version: "1.0"
+    property string version: "1.1"
     property string appname: "TurboReadR"
     property string appicon: "images/icon.png"
 
-    property QtObject firstpage
-    initialPage: Component { FirstPage { id: firstP ; Component.onCompleted: firstpage = firstP } }
+    property Item firstpage
+    initialPage: Component {
+        FirstPage {
+            id: firstPage
+            Component.onCompleted: {
+                mainWindow.firstpage = firstPage
+                DB.getSettings()
+            }
+        }
+    }
     //cover: Qt.resolvedUrl("cover/CoverPage.qml")
     cover: undefined
 }

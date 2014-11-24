@@ -27,7 +27,8 @@ OTHER_FILES += qml/harbour-turboreadr.qml \
     qml/pages/CreditsModel.qml \
     qml/pages/SettingsPage.qml \
     rpm/harbour-turboreadr.changes \
-    qml/pages/images/icon.png
+    qml/pages/images/icon.png \
+    qml/pages/db.js
 
 # to disable building translations every time, comment out the
 # following CONFIG line

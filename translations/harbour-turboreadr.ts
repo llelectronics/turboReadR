@@ -38,10 +38,6 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Words per minute:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -55,6 +51,10 @@
     </message>
     <message>
         <source>Font size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

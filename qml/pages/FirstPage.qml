@@ -59,6 +59,11 @@ Page {
 //        }
     }
 
+    function openText(url) {
+        console.debug("Loading Textfile:" + url);
+        txt.text = _tfile.load(url);
+    }
+
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         anchors.fill: parent
@@ -68,6 +73,10 @@ Page {
             MenuItem {
                 text: qsTr("About ") + appname
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Open Textfile")
+                onClicked: pageStack.push(Qt.resolvedUrl("fileman/Main.qml"), {dataContainer: mainWindow.firstpage})
             }
             MenuItem {
                 text: qsTr("Settings")

@@ -9,6 +9,13 @@
     </message>
 </context>
 <context>
+    <name>DirEntryMenu</name>
+    <message>
+        <source>Deleting </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>About </source>
@@ -32,6 +39,17 @@
     </message>
     <message>
         <source>Enter the text you want to read fast here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Textfile</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OpenDialog</name>
+    <message>
+        <source>Open file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

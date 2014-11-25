@@ -32,7 +32,7 @@ ContextMenu {
     }
 
     MenuItem {
-        text: "Delete"
+        text: qsTr("Delete")
         onClicked: entryMenu.deleteFile()
     }
 }

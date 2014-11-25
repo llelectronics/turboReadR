@@ -14,6 +14,41 @@
         <source>Deleting </source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DirList</name>
+    <message>
+        <source>Show Hidden Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide Hidden Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Filesystem Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Android SDCard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show SDCard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scroll to top</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>FirstPage</name>
@@ -43,6 +78,10 @@
     </message>
     <message>
         <source>Open Textfile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File could not be opened</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

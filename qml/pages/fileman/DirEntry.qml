@@ -28,7 +28,7 @@ ListItem {
         //var url = "file://" + filePath;
         //console.log("Open clicked");
         mediaFileOpen(filePath);
-        pageStack.push(dataContainer)
+        //pageStack.push(dataContainer)
 
         //Qt.openUrlExternally(url);
     }

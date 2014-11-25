@@ -38,7 +38,8 @@ OTHER_FILES += qml/harbour-turboreadr.qml \
     qml/pages/fileman/DirStack.qml \
     qml/pages/fileman/DirList.qml \
     qml/pages/fileman/DirEntryMenu.qml \
-    qml/pages/fileman/DirEntry.qml
+    qml/pages/fileman/DirEntry.qml \
+    qml/pages/Notification.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

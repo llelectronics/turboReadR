@@ -12,7 +12,42 @@
     <name>DirEntryMenu</name>
     <message>
         <source>Deleting </source>
-        <translation type="unfinished"></translation>
+        <translation>Lösche </translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>Löschen</translation>
+    </message>
+</context>
+<context>
+    <name>DirList</name>
+    <message>
+        <source>Show Hidden Files</source>
+        <translation>Versteckte Dateien einblenden</translation>
+    </message>
+    <message>
+        <source>Hide Hidden Files</source>
+        <translation>Versteckte Dateien ausblenden</translation>
+    </message>
+    <message>
+        <source>Show Filesystem Root</source>
+        <translation>Zeige Wurzeldateisystem </translation>
+    </message>
+    <message>
+        <source>Show Home</source>
+        <translation>Zeige Persönliches Verzeichnis</translation>
+    </message>
+    <message>
+        <source>Show Android SDCard</source>
+        <translation>Zeige Android SDCard</translation>
+    </message>
+    <message>
+        <source>Show SDCard</source>
+        <translation>Zeige SDCard</translation>
+    </message>
+    <message>
+        <source>Scroll to top</source>
+        <translation>Nach oben scrollen</translation>
     </message>
 </context>
 <context>
@@ -43,14 +78,18 @@
     </message>
     <message>
         <source>Open Textfile</source>
-        <translation type="unfinished"></translation>
+        <translation>Textdatei öffnen</translation>
+    </message>
+    <message>
+        <source>File could not be opened</source>
+        <translation>Datei konnte nicht geöffnet werden</translation>
     </message>
 </context>
 <context>
     <name>OpenDialog</name>
     <message>
         <source>Open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei öffnen</translation>
     </message>
 </context>
 <context>

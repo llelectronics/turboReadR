@@ -60,9 +60,15 @@ Page {
     }
 
     function openText(url) {
-        console.debug("Loading Textfile:" + url);
-        txt.text = _tfile.load(url);
+        //console.debug("Loading Textfile:" + url);
+        var fileContent = _tfile.load(url);
+        if (fileContent != "") {
+            txt.text = fileContent;
+            pageStack.push(page);
+        }
+        else notification.show(qsTr("File could not be opened"));
     }
+
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {

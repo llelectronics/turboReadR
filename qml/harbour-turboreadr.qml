@@ -54,6 +54,10 @@ ApplicationWindow
     }
     //cover: Qt.resolvedUrl("cover/CoverPage.qml")
     cover: undefined
+
+    Notification {
+        id:notification
+    }
 }
 
 

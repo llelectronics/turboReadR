@@ -32,7 +32,6 @@ OTHER_FILES += qml/harbour-turboreadr.qml \
     qml/pages/images/icon.png \
     qml/pages/db.js \
     qml/pages/fileman/qmldir \
-    qml/pages/fileman/OpenDialog.qml \
     qml/pages/fileman/Main.qml \
     qml/pages/fileman/DirView.qml \
     qml/pages/fileman/DirStack.qml \

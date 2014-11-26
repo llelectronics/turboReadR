@@ -8,6 +8,21 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Nov 25 2014 llelectronics <leszek.lesner@web.de> 1.1-2
+- Fixed remove file in fileman
+
+* Tue Nov 25 2014 llelectronics <leszek.lesner@web.de> 1.1-1
+- Added allowOrientations all
+- Added extra timer that doubles the reading time for long words
+- Added setting for longword chars
+- Added setting for how fast longwords should be read
+- Added translations for new settings
+- Added setting to change font size
+- Added persistent settings saving
+- Updated SettingsPage to be a dialog
+- Added option to open text files via integrated filemanager
+- Show notification if file cannot be opened
+
 * Sun Jun 06 2014 llelectronics <leszek.lesner@web.de> 1.0-1
 - Initial release
 

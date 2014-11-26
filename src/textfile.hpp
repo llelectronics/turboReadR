@@ -4,7 +4,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QFile>
 #include <QString>
-#include <QDebug>
+//#include <QDebug>
 
 class TextFile : public QObject
 {   Q_OBJECT
@@ -13,12 +13,12 @@ public slots:
     {
         QFile f(path);
         if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            qDebug() << "File " + path + " can not be read" ;
+            //qDebug() << "File " + path + " can not be read" ;
             return QString();
         }
         QString data(QString::fromUtf8(f.readAll()));
         f.close();
-        qDebug() << "Text loading: " + data ;
+        //qDebug() << "Text loading: " + data ;
         return data;
     }
 };

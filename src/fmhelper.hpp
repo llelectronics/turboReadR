@@ -4,7 +4,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QFile>
 #include <QString>
-#include <QDebug>
+//#include <QDebug>
 #include <QDir>
 
 class FM : public QObject

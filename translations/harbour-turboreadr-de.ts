@@ -89,7 +89,7 @@
     <name>OpenDialog</name>
     <message>
         <source>Open file</source>
-        <translation>Datei öffnen</translation>
+        <translation type="obsolete">Datei öffnen</translation>
     </message>
 </context>
 <context>

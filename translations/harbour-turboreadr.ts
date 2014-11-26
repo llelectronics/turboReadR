@@ -86,13 +86,6 @@
     </message>
 </context>
 <context>
-    <name>OpenDialog</name>
-    <message>
-        <source>Open file</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>SettingsPage</name>
     <message>
         <source>Words per minute:</source>

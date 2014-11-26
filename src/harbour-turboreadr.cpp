@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
 
-    qmlRegisterType<QQuickFolderListModel>("harbour.videoplayer.Videoplayer", 1, 0, "FolderListModel");
+    qmlRegisterType<QQuickFolderListModel>("harbour.turboreadr.TurboReadr", 1, 0, "FolderListModel");
 
     QQuickView *view = SailfishApp::createView(); // I get a white background with this.
     view->setSource(SailfishApp::pathTo("qml/harbour-turboreadr.qml"));  // So I do this ;)

@@ -46,7 +46,7 @@ Page {
             dataContainer.openText(url);
         }
         onFileRemove: {
-            _fm.removeFile(url);
+            _fm.remove(url);
         }
     }
 

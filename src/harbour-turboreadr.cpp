@@ -36,6 +36,10 @@
 #include "fmhelper.hpp"
 #include "textfile.hpp"
 #include "folderlistmodel/qquickfolderlistmodel.h"
+#include <QQuickView>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QGuiApplication>
 
 
 int main(int argc, char *argv[])

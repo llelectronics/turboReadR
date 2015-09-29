@@ -38,7 +38,7 @@ ApplicationWindow
     id: mainWindow
     allowedOrientations: Orientation.All
 
-    property string version: "1.1"
+    property string version: "1.2"
     property string appname: "TurboReadR"
     property string appicon: "images/icon.png"
 

@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Nov 25 2014 llelectronics <leszek.lesner@web.de> 1.2-1
+- Fixed remove file in fileman
+
 * Tue Nov 25 2014 llelectronics <leszek.lesner@web.de> 1.1-2
 - Fixed remove file in fileman
 
